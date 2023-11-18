@@ -1,0 +1,19 @@
+import pandas as pd
+df=pd.read_csv("heart1.csv")
+df.head()
+df.shape
+df.isnull()  #null = true 
+df.isnull().sum()  #sum of true
+df.count()
+df.dtypes
+#0=true
+df==0
+df[df==0]
+df[df==0].count()
+df.columns
+df[‘age’].mean()
+df[‘age’,’sex’,’chestpain’,’restbp’,’chol’]
+from sklearn.model_selection import train_test_split
+train,test= train_test_split(df,random_state=0,test_size=0.25)
+train.shape
+test.shape
